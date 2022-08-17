@@ -1,7 +1,8 @@
 import "./App.css";
+import { Button } from "./components/Button";
 // Instructions
-// - Start a new project
-// - Create components, similar to the Button component Nico built during the lecture.
+// - Start a new project ✅
+// - Create components, similar to the Button component Nico built during the lecture. ✅
 //   - Button: should return a button styled however you like. Make it use a few useful custom props similar to how Nico used them during the lecture - like size or variant.
 //     - Input: returns a label and an input under it, both customizable.
 //   - CheckboxGroup: a group of checkboxes. The component should take:
@@ -23,20 +24,20 @@ function App() {
   return (
     <div className="App">
       <div className="buttons">
-        <button
+        <Button
           onClick={() => {
             alert("You clicked the previous button!");
           }}
         >
           PREVIOUS
-        </button>
-        <button
+        </Button>
+        <Button
           onClick={() => {
             alert("You clicked the next button!");
           }}
         >
           NEXT
-        </button>
+        </Button>
       </div>
     </div>
   );
