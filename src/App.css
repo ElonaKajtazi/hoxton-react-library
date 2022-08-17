@@ -3,16 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
-.App {
+body {
   display: grid;
 
   place-items: center;
   height: 100vh;
 }
-
-.buttons {
+.App {
+  text-align: center;
   display: grid;
-  grid-template-columns: auto auto;
+  gap: 1rem;
+}
+
+.buttons-container {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
   gap: 2rem;
 }
 

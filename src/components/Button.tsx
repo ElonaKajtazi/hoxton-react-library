@@ -1,4 +1,8 @@
-export function Button({ children, ...props }) {
+type Props = {
+  children: string;
+  size: string;
+};
+export function Button({ children, size, ...props }: Props) {
   return (
     <button className="button" {...props}>
       {children}

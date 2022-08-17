@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import { Button } from "./components/Button";
 // Instructions
@@ -21,19 +22,26 @@ import { Button } from "./components/Button";
 // - Don't forget to thoroughly test your components. You don't need to go crazy - console.log'ing the values or setting a piece of state (and testing it) should give you an idea.
 // - You are welcome to look at other component libraries for inspiration
 function App() {
+  const [move, setMove] = useState(true);
   return (
     <div className="App">
-      <div className="buttons">
+      <h1>It's nice here...</h1>
+      {move ? (
+        <h1> Why are we going back.. </h1>
+      ) : (
+        <h1>Cool, lets go forward</h1>
+      )}
+      <div className="buttons-container">
         <Button
           onClick={() => {
-            alert("You clicked the previous button!");
+            setMove(true);
           }}
         >
           PREVIOUS
         </Button>
         <Button
           onClick={() => {
-            alert("You clicked the next button!");
+            setMove(false);
           }}
         >
           NEXT
