@@ -60,10 +60,22 @@ function App() {
           NEXT
         </Button>
       </div> */}
-      <form onClick={(event) =>{
-        event.preventDefault();
-        console.log(event.target.name.value);
-      }}>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          console.log("Name:", event.target.name.value);
+          console.log("Age:", event.target.age.value);
+          console.log("Email:", event.target.email.value);
+          const foods = [...event.target.food]
+            .filter((input) => input.checked)
+            .map((input) => input.value);
+          console.log(foods);
+          const colors = [...event.target.color]
+          .filter((input) => input.checked)
+          .map((input) => input.value);
+        console.log(colors);
+        }}
+      >
         <Label question={"Name:"} type={"text"} name={"name"} />
         <Label question={"Age:"} type={"number"} name={"age"} />
         <Label question={"Email:"} type={"email"} name={"email"} />
