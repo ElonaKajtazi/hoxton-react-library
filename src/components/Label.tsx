@@ -4,7 +4,7 @@ type Props = {
   name: string;
 };
 
-export function Input({ question, name, type }: Props) {
+export function Label({ question, name, type }: Props) {
   return (
     <label className="text-label">
       <h1 className="question">{question}</h1>
