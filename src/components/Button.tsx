@@ -2,6 +2,7 @@ type Props = {
   children: string;
   size?: "small" | "medium" | "large";
   secondary?: boolean;
+  [x: string]: any;
 };
 export function Button({
   children,
