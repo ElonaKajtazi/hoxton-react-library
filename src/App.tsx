@@ -34,8 +34,19 @@ function App() {
       <div className="buttons-container">
         <Button
           onClick={() => {
+            alert("hello hello");
+          }}
+          size="small"
+          secondary
+        >
+          HELLO
+        </Button>
+        <Button
+          onClick={() => {
             setMove(true);
           }}
+          size="medium"
+          // secondary
         >
           PREVIOUS
         </Button>
@@ -43,6 +54,7 @@ function App() {
           onClick={() => {
             setMove(false);
           }}
+          size="large"
         >
           NEXT
         </Button>
